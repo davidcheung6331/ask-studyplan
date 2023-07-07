@@ -1,4 +1,4 @@
-import subprocess
+# import subprocess
 import streamlit as st
 from langchain.agents import create_pandas_dataframe_agent
 from langchain.llms import OpenAI
@@ -68,41 +68,41 @@ with col2:
     if st.button(q1):
         st.subheader("2. Click button below for enquiry the CSV")
         A1 = agent.run(q1)
-        subprocess.call(["say", q1])
+        # subprocess.call(["say", q1])
         st.info(A1)
-        subprocess.call(["say", A1])
+        # subprocess.call(["say", A1])
 
     if st.button(q2):
         A2 = agent.run(q2)
-        subprocess.call(["say", q2])
+        # subprocess.call(["say", q2])
         st.info(A2)
-        subprocess.call(["say", A2])
+        # subprocess.call(["say", A2])
 
     if st.button(q3):
         A3 = agent.run(q3)
-        subprocess.call(["say", q3])
+        # subprocess.call(["say", q3])
         st.info(A3)
-        subprocess.call(["say", A3])
+        # subprocess.call(["say", A3])
 
     if st.button(q4):
         A4 = agent.run(q4)
-        subprocess.call(["say", q2])
+        # subprocess.call(["say", q2])
         st.info(A4)
-        subprocess.call(["say", A4])
+        # subprocess.call(["say", A4])
 
 
     if st.button(q5):
         A5 = agent.run(q5)
-        subprocess.call(["say", q5])
+        # subprocess.call(["say", q5])
         st.info(A5)
-        subprocess.call(["say", A5])
+        # subprocess.call(["say", A5])
 
     st.subheader("Option 2. 👇🏻 Enter your Prompt Text to query: ")
     query = st.text_input("Your Prompt Text", value=q5)  
     if st.button("Query"):
         result = agent.run(query)
         st.info(result)
-        subprocess.call(["say", result])
+        # subprocess.call(["say", result])
     
 
 log = """
